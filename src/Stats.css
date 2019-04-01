@@ -1,18 +1,23 @@
-
-.Stats {
-  text-align: center;
-  margin: auto;
-  width: 50%;
-  height:40% ;
-  padding-top: 10%;
+button.chart {
+ background-color: #1AA086;
+ border: none;
+ color: white;
+ padding: 10px 25px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin: 5px 10px;
+ cursor: pointer;
 }
 
+.c3 .c3-axis-x path, .c3 .c3-axis-x line {
+    fill: #1AA086;
+}
+.c3 .c3-axis-y path, .c3 .c3-axis-y line {
+    fill: #1AA086;
+}
 
-table, tr, td {
-  border: 2px solid black;
-  padding:5px;
-  Text-align:center;
-  margin-left:auto;
-  margin-right:auto;
-
+.c3-axis-x, .c3-axis-y {
+    fill: #1AA086;   
 }

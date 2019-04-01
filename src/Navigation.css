@@ -3,7 +3,19 @@
 
 }
 
-Nav {
-  text-align: center;
 
+.Navigation {
+  text-align: right;
+  background-color: #1AA086;
+
+}
+
+.image {
+padding-right: 10px;
+
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
 }

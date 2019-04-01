@@ -30,18 +30,7 @@ Nav {
 
 }
 
-button.chart {
- background-color: #4CAF50;
- border: none;
- color: white;
- padding: 10px 25px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
- margin: 5px 10px;
- cursor: pointer;
-}
+
 
 
 /* Here we are giving our html element a style guidline as we will mainly be using it here and nowhere else on the application */

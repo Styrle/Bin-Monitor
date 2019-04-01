@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
-import './c3.css';
 import c3 from 'c3';
 
 class Chart extends Component {
@@ -13,9 +12,9 @@ class Chart extends Component {
           columns: this.props.datepub,
           type: this.props.chartType,
           colors: {
-              data1: '#CFD8DC',
-              data2: '#673AB7',
-              data3: '#0000ff'
+              data1: '#1AA086',
+              data2: '#1AA086',
+              data3: '#1AA086'
           }
         },
         axis: {
