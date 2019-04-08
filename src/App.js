@@ -15,7 +15,6 @@ class App extends Component {
       <BrowserRouter>
       <div className="App">
         <Navigation/>
-
         <Route path='/status' component={Status} />
         <Route path='/stats' component={Stats} />
       </div>

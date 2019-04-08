@@ -1,3 +1,9 @@
+.stats {
+  text-align: center;
+  padding-left: 16%;
+  padding-right: 13%;
+}
+
 button.chart {
  background-color: #1AA086;
  border: none;
@@ -11,6 +17,14 @@ button.chart {
  cursor: pointer;
 }
 
+.c3-axis-y-label{
+  font-weight: bold;
+}
+
+.c3-axis-x-label{
+  font-weight: bold;
+}
+
 .c3 .c3-axis-x path, .c3 .c3-axis-x line {
     fill: #1AA086;
 }
@@ -19,5 +33,10 @@ button.chart {
 }
 
 .c3-axis-x, .c3-axis-y {
-    fill: #1AA086;   
+    fill: #1AA086;
+}
+
+/* hide the 0 that displays when setting the min to min */
+.c3-axis-x g:first-of-type {
+  opacity:0!important;
 }

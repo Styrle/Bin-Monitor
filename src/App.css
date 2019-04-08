@@ -22,14 +22,15 @@
 
 header {
   text-align: center;
-  padding-top:250px;
+  padding-top:25px;
+  padding-bottom: 25px;
+  color: #25484a;
 }
 
 Nav {
   text-align: right;
 
 }
-
 
 
 

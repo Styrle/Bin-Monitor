@@ -12,7 +12,7 @@ class Navigation extends Component {
       return (
         <div className="Navigation">
         <Navbar >
-        <Image className="image" src="http://farm8.staticflickr.com//7811//33638377048_c0fd555b57_o.png" rounded />
+        <Image className="image" src="https://live.staticflickr.com/7908/33686652828_97f866d53c_o.png" rounded />
           <Nav  className="mr-auto">
           <div className="text-right">  <Nav.Link href="status">Status</Nav.Link> </div>
             <Nav.Link href="stats">Stats</Nav.Link>

@@ -11,10 +11,6 @@ import './Stats.css';
       console.log("Bar");
       this.setState({ chartType: 'bar' });
   }
-  _setLineChart = () => {
-      console.log("Line");
-      this.setState({ chartType: 'spline' })
-  }
     constructor(props) {
       super(props);
       this.pubnub = new PubNub({
@@ -22,38 +18,37 @@ import './Stats.css';
         subscribeKey: 'sub-c-b95070f4-3908-11e9-b86f-06e8d5f9a4fd'
 
         });
-        this.datepub = [[]];
+        this.datepub = [[],[]];//define datepub as array with multiple items
         this.state = {
-          chartType: 'bar',
+          chartType: 'bar',//define chart state as bar chart
           datepub: this.datepub,
           pubnub: this.pubnub,
-          channel: 'test'
+          channel: 'cycles'
       };
       this.pubnub.history(
         {
-      channel : 'test',
-      count : 11
+      channel : 'cycles',
+      count : 8
       },
       (function (status, response) {
         for(let i = 0; i < response.messages.length; i++) {
-          this.datepub[0][i] = response.messages[i]['entry']['eon']['sensor']; //reading response messages into array
+          this.datepub[0][i] = response.messages[i]['entry']['eon']['bin1']; //reading response messages into array, choosing the bin1 message
+          this.datepub[1][i] = response.messages[i]['entry']['eon']['bin2']; //reading response messages into array, choosing the bin2 message
         }
+      //  this.datepub[1] = this.datepub[0].slice().reverse();	// reversing second array
         this.datepub[0].unshift('Bin 1'); // adding label to start of array 0
+        this.datepub[1].unshift('Bin 2'); //adding label to start of array 1
         this.setState({datepub:this.datepub}); //update datepub
       }).bind(this)						//binding to present execution context
     );
-    console.log(this.datepub);
-    console.log(this.datepub[0]);
-    console.log(this.datepub[[0][0]]);
     }
     render() {
       return (
-          <div className="Status">
+          <div className="stats">
           <header>
-          <Chart ident="chart1" datepub = {this.state.datepub} pubnub={this.state.pubnub} channel={this.state.channel} chartType={this.state.chartType}/>
-          <button className="chart" onClick={this._setLineChart}>Line Chart</button>
-          <button className="chart" onClick={this._setBarChart}>Bar Chart</button>
+          <h1>Historical Bin Statistics</h1>
           </header>
+          <Chart ident="chart1" datepub = {this.state.datepub} pubnub={this.state.pubnub} channel={this.state.channel} chartType={this.state.chartType}/>
         </div>
 
       );

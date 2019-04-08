@@ -8,32 +8,46 @@ class Chart extends Component {
 
        this.chart = c3.generate({
         bindto: '#'+this.props.ident,
+        size: {
+    height: 500
+},
         data: {
           columns: this.props.datepub,
           type: this.props.chartType,
           colors: {
-              data1: '#1AA086',
-              data2: '#1AA086',
-              data3: '#1AA086'
+              "Bin 1": '#1AA086',
+              "Bin 2": '#25484a',
           }
         },
         axis: {
           y: {
+            label: {
+                text: 'Bin cycles',
+                position: 'outer-middle'
+              },
             min: 0, //Minimum and maximum values for our % calculation
-            max: 100,
+            max: 10,
             padding: {top:15, bottom:0} //here we are telling the graph to fully display with the padding option
+          },
+          x: {
+            label: {
+                text: 'Days',
+                position: 'outer-center-top'
+              },
+              min: 1,
+              max: 7
           }
-        }
+        },
+        legend: {
+            position: 'right'
+        },
+        padding: {
+  bottom: 30
+},
       });
     }
 
-    componentDidUpdate() {
-      this._updateChart();
-    }
-    _updateChart() {
-      this.chart.load({columns: this.props.datepub, type: this.props.chartType});
 
-    }
     render() {
       return <div id={this.props.ident}></div>;
     }

@@ -1,18 +1,19 @@
 
-.Stats {
+.Status {
   text-align: center;
   margin: auto;
-  width: 50%;
+  width: 65%;
   height:40% ;
-  padding-top: 10%;
 }
 
 
 table, tr, td {
   border: 2px solid black;
-  padding:5px;
+  padding:10px;
   Text-align:center;
   margin-left:auto;
   margin-right:auto;
-
+  background-color:#1AA086;
+  color:white;
+  border:white;
 }
