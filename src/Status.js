@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import PubNub from 'pubnub';
-import Chart from './Chart';
 import Table from 'react-bootstrap/Table'
-import './Stats.css';
+import './Status.css';
 
 
 class Status extends Component {
@@ -11,7 +10,8 @@ class Status extends Component {
     super(props);
     this.pubnub = new PubNub({
       publishKey: 'pub-c-74f667c6-3fb9-426d-b8f6-80838600350c',
-      subscribeKey: 'sub-c-b95070f4-3908-11e9-b86f-06e8d5f9a4fd'
+      subscribeKey: 'sub-c-b95070f4-3908-11e9-b86f-06e8d5f9a4fd',
+      channel: 'percentFull'
       //here we are requesting our data from pubnub
       });
       this.datepub = [[]];
@@ -19,12 +19,13 @@ class Status extends Component {
         chartType: 'bar',
         datepub: this.datepub,
         pubnub: this.pubnub,
-        channel: 'test'
+        channel: 'percentFull'
     };
+
     this.pubnub.history(
       {
-    channel : 'test',
-    count : 10 //this defines our dataset for our graph
+    channel : 'percentFull',
+    count : 5 //this defines our dataset for our graph
     },
     (function (status, response) {
       for(let i = 0; i < response.messages.length; i++) {
@@ -54,8 +55,8 @@ render() {
    <tr>
      <td>1</td>
      <td>Table cell</td>
-     <td>Table cell</td>
-     <td>Table cell</td>
+     <td>hello</td>
+     <td>{this.state.datepub[0][1]}</td>
    </tr>
    <tr>
      <td>2</td>

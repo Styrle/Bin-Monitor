@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PubNub from 'pubnub';
 import Chart from './Chart';
-import './Status.css';
+import './Stats.css';
 
 
 
@@ -32,7 +32,7 @@ import './Status.css';
       this.pubnub.history(
         {
       channel : 'test',
-      count : 10
+      count : 11
       },
       (function (status, response) {
         for(let i = 0; i < response.messages.length; i++) {
