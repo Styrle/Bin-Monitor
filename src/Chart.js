@@ -15,12 +15,12 @@ class Chart extends Component {
           columns: this.props.datepub,
           type: this.props.chartType,
           colors: {
-              "Bin 1": '#1AA086',
-              "Bin 2": '#25484a',
+              "Bin 1": '#1AA086',//colour for bin 1
+              "Bin 2": '#25484a',//colour for bin 2
           }
         },
         axis: {
-          y: {
+          y: {//everything that we use for our Y axis will be used here
             label: {
                 text: 'Bin cycles',
                 position: 'outer-middle'
@@ -32,14 +32,14 @@ class Chart extends Component {
           x: {
             label: {
                 text: 'Days',
-                position: 'outer-center-top'
+                position: 'outer-center-top'//saying we want our text on the outside to the top and center
               },
-              min: 1,
+              min: 1,//defining the numbers we want for the X axis
               max: 7
           }
         },
         legend: {
-            position: 'right'
+            position: 'right'//moving our key to the side of the page so it is less infomation to observe on the X axis
         },
         padding: {
   bottom: 30

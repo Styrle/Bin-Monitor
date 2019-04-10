@@ -47,7 +47,7 @@ import './Stats.css';
           <div className="stats">
           <header>
           <h1>Historical Bin Statistics</h1>
-          </header>
+          </header> {/*giving our page a name and the graph below, adding all of our data which is above and specifying where it is coming from using chart*/}
           <Chart ident="chart1" datepub = {this.state.datepub} pubnub={this.state.pubnub} channel={this.state.channel} chartType={this.state.chartType}/>
         </div>
 

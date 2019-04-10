@@ -61,8 +61,8 @@ render() {
 </header>
 <Table responsive="sm">
  <thead>
-   <tr>
-     <th>Bin</th>
+   <tr>{/*creating a table*/}
+     <th>Bin</th>{/*writing the top layer for the table content*/}
      <th>Type</th>
      <th>Status</th>
      <th>Percentage </th>
@@ -70,18 +70,18 @@ render() {
  </thead>
  <tbody>
    <tr>
-     <td>{this.state.datepub[0][0]}</td>
+     <td>{this.state.datepub[0][0]}</td>{/*input from the first array at 0 meaning it will print bin 1*/}
      <td>General Waste</td>
-     <td>{currentStatus[0]}</td>
-     <td>{this.state.datepub[0][1]}</td>
+     <td>{currentStatus[0]}</td>{/*using our if else statements to define which of the 4 statements the bin is currently, based off the percentage*/}
+     <td>{this.state.datepub[0][1]}</td>{/*the percentage based on how full the bin is*/}
    </tr>
    <tr>
-     <td>{this.state.datepub[1][0]}</td>
+     <td>{this.state.datepub[1][0]}</td>{/*input from the first array at 0 meaning it will print bin 2*/}
      <td>Recycling</td>
      <td> {currentStatus[1]}</td>
      <td>{this.state.datepub[1][1]}</td>
    </tr>
-
+ {/* making the table more responsive using react-bootstrap grid system */}
  </tbody>
 </Table>
 <Table responsive="lg">

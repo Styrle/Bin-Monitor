@@ -12,12 +12,12 @@ import Image from 'react-bootstrap/Image';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router> {/*This is our opening tag which binds everything within the route component*/}
           <div>
-          <Navbar className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <Navbar className="navbar navbar-expand-lg navbar-dark bg-dark"> {/*Here we are using our bootstrap to style our navigation*/}
           <Image className="image" src="https://live.staticflickr.com/7908/33686652828_97f866d53c_o.png" rounded />
             <Nav  className="mr-auto">
-            <nav>
+            <nav> {/*second nav used for react-router to bind our links to a class and the navigation path*/}
             <ul className="navbar-nav mr-auto">
               <li><Link to={'/Status'} className="nav-link">Status</Link></li>
               <li><Link to={'/Stats'} className="nav-link">Stats</Link></li>
@@ -26,7 +26,7 @@ class App extends Component {
             </Nav>
           </Navbar>
             <hr />
-            <Switch>
+            <Switch> {/*using switch so the program can go between both pages and not have to reload every time */}
                 <Route path='/Status' component={Status} />
                 <Route path='/Stats' component={Stats} />
             </Switch>
