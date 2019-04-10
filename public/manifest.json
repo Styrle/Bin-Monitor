@@ -1,6 +1,7 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
+  "homepage":"http://joshuaserpis.panel.uwe.ac.uk",
   "icons": [
     {
       "src": "favicon.ico",
