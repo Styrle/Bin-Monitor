@@ -1,4 +1,10 @@
 # IOT-Application
 
-## Application report
-Within this appliction I created my first react project, including displaying data from a physical object (arduino) using pubnub to relay that data. The project was for the my 2nd year IoT module and based around the reading of bin data, calculating how full a bin was and thus allowing the relevant services to waste less time and collect those bins which need more attention or are more popular, it would also be an idea to see where recycling and other items are more used by users. Especially within a university setting.
+## Bin monitor
+The Bin monitor is a IOT device designed for your waste management needs, measuring how fill level of you're bin and thus allowing you or community waste team to calculate which bins are most used around your campus or general area.
+
+## Project background  
+This project was created as part of the IOT module and was the authors first interaction with react, Arduino and pub nub. The video below documents this and the creation of the overall application in use as well as web monitoring.
+
+## Video  
+[![Bin monitor](https://www.youtube.com/watch?v=p7mcFBUQZxM&feature=youtu.be&fbclid=IwAR3p-SuI6OSPYBiCpUrVfnmo1bPMH4uB9Gm-Fa32M13m1ERIrg5UeQqQKIE)]
