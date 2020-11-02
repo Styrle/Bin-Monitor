@@ -7,4 +7,4 @@ The Bin monitor is a IOT device designed for your waste management needs, measur
 This project was created as part of the IOT module and was the authors first interaction with react, Arduino and pub nub. The video below documents this and the creation of the overall application in use as well as web monitoring.
 
 ## Video  
-[![Bin monitor](https://imgur.com/Ztnef89)](https://youtu.be/p7mcFBUQZxM "Bin monitor")
+[![Bin monitor](https://imgur.com/Ztnef89.png)](https://youtu.be/p7mcFBUQZxM "Bin monitor")
